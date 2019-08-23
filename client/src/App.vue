@@ -4,7 +4,8 @@
     <!-- <Choice></Choice> -->
     <!-- <Username></Username> -->
     <!-- <Waiting-Room></Waiting-Room> -->
-    <Play-Room></Play-Room>
+    <!-- <Play-Room></Play-Room> -->
+    <Final-Page></Final-Page>
   </div>
 </template>
 
@@ -14,11 +15,12 @@ import Choice from './views/Choice.vue'
 import Username from './views/Username.vue'
 import WaitingRoom from './views/WaitingRoom.vue'
 import PlayRoom from './views/PlayRoom.vue'
+import FinalPage from './views/ScorePage'
 
 export default {
   name: 'app',
   components: {
-    Home,Choice,Username,WaitingRoom,PlayRoom
+    Home,Choice,Username,WaitingRoom,PlayRoom,FinalPage
   }
 }
 </script>
