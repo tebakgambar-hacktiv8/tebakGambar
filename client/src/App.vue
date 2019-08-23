@@ -5,6 +5,7 @@
     <Username v-if="page === 'username'"></Username>
     <Waiting-Room v-if="page === 'waiting-room'"></Waiting-Room>
     <Play-Room v-if="page === 'play-room'"></Play-Room>
+    <Final-Page v-if="page === 'final-page'"></Final-Page>
   </div>
 </template>
 
@@ -14,13 +15,14 @@ import Choice from './views/Choice.vue'
 import Username from './views/Username.vue'
 import WaitingRoom from './views/WaitingRoom.vue'
 import PlayRoom from './views/PlayRoom.vue'
+import FinalPage from './views/ScorePage'
 
 import {mapState} from 'vuex'
 
 export default {
   name: 'app',
   components: {
-    Home,Choice,Username,WaitingRoom,PlayRoom
+    Home,Choice,Username,WaitingRoom,PlayRoom,FinalPage
   },
   data: {
     },

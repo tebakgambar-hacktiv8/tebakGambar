@@ -1,62 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500" rel="stylesheet">
-    <link href="main.scss" rel="stylesheet">
-    <link rel="stylesheet" href="animate.min.css">
-    <style>
-        body {
-            background: #333;
-            color: #fff;
-        }
-        .user1 {
-            position: relative;
-            border: 2px solid #FFFFFF;
-            box-sizing: border-box;
-            border-radius: 30px;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .user2 {
-            position: relative;
-            border: 5px solid #FFD600;
-            box-sizing: border-box;
-            border-radius: 30px;
-            width: 250px;
-            height: 70px;
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .user3 {
-            border: 2px solid #FFFFFF;
-            box-sizing: border-box;
-            border-radius: 30px;
-            width: 150px;
-            height: 50px;
-            text-align: center;
-            display: inline-block;
-            align: center !important;
-            margin: auto !important;
-        }
-      
-    </style>
-</head>
-<header>
-    <h1>WOW! Not Bad</h1>
-</header>
-
-<body>
-
-<h1 class="animated infinite bounce delay-2s">Example</h1>
-    <div class="card animated shake">
+<template>
+<div>
+    <div class="card">
         <div class="card-avatar">
             <svg viewBox="0 0 208 278">
                 <g transform="matrix(0.1,0,0,-0.1,-31.2625,284.904)">
@@ -107,41 +51,75 @@
                 </div>
             </div>
             <div class="row row--stars">
-                <div class ="user1">
+                <div class ="user">
                     <p class="cell">
                         <span class="underline underline--stars">#1 Lidya</span>
                     </p>
                 </div>
             </div>
             <div class="row row--stars">
-                <div class="user2" style="display: block">
+                <div class="user user--active">
                     <p class="cell">
                         <span class="underline underline--stars" style="width: 100px;">#2 Arya</span>
                     </p>
                 </div>
             </div>
             <div class="row row--stars">
-                <div class ="user3" style="display: block;">
+                <div class ="user">
                     <p class="cell">
                         <span class="underline underline--stars">#3 Romi</span>
                     </p>
                 </div>
             </div>
             <div class="row row--stars">
-                <div class ="user3" style="display: block;">
+                <div class ="user">
                     <p class="cell">
                         <span class="underline underline--stars">#4 Ghiffari</span>
                     </p>
                 </div>
             </div>
         </div>
-</body>
+    </div>
+</div>
+</template>
 
 <script>
-    box({
-        targets: '.css-selector-demo .el',
-        translateX: 250
-    })
+export default {
+
+}
 </script>
 
-</html>
+<style>
+  @import url('../assets/main.css');
+
+        body {
+            background: #333;
+            color: #fff;
+        }
+        .row{
+            text-align:center;
+        }
+        .row--stars p{
+            display: inline;
+        }
+        .user {
+            position: relative;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: auto;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            margin: 8px auto;
+        }
+        .user--active {
+            font-size: 35px;
+            border: 5px solid #FFD600;
+            padding: 10px 20px;
+        }
+        .user--active span{
+            color: #FFD600;
+            
+        }
+</style>
