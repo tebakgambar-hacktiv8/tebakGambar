@@ -49,8 +49,10 @@ export default new Vuex.Store({
     },
     fetchQuestions ({ state, commit }) {
       db.collection('quiz').onSnapshot((snapshot) => {
-        let question = { id: snapshot.id, ...snapshot.data() }
-        commit('ADD_QUESTIONS', question)
+        snapshot.forEach(e => {
+          let question = { id: e.id, ...e.data() }
+          commit('ADD_QUESTIONS', question)
+        })
       })
       state.questions.sort(() => Math.random() - 0.5) // random
     },
