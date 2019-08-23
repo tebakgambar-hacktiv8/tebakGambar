@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    page: 'final-page',
+    page: 'home'
   },
   mutations: {
 
