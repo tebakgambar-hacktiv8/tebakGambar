@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+
     <Home v-if="page === 'home'"></Home>
     <Choice v-if="page === 'choice'"></Choice>
     <Username v-if="page === 'username'"></Username>
     <Waiting-Room v-if="page === 'waiting-room'"></Waiting-Room>
     <Play-Room v-if="page === 'play-room'"></Play-Room>
     <Final-Page v-if="page === 'final-page'"></Final-Page>
+
   </div>
 </template>
 
